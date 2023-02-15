@@ -1,0 +1,88 @@
+                          dom: document object model
+                                 simply,
+                         *document means html file 
+                         *object means all html tags
+                         *dom is a model constructing of all the html tags of a html file
+
+**dom sob html tag guloke object akare js er vitore rakhe day jate jsseguloke access korte pare
+
+---->>>>>there are 5 ways to bring elements from html:
+
+*tag name dia kono element paite:(getElementsByTagName)
+                console.log(document.getElementsByTagName('body'))
+                const getLi=document.getElementsByTagName('li');
+                for(const li of getLi){
+                console.log(li.innerText);
+                }
+*class and id dia:
+                console.log(document.getElementById('p-tag'));
+                console.log(document.getElementsByClassName('h1-tag'));
+
+       ->-> class and tagname er khetre array like object akare output day.
+             *id er khtre object ta sorasori dibe.
+       ->*** innerText
+       ->*** innerHtml
+*querySelectorAll:
+           kono akta section er under er sob same element ke select korte ati use hoa.
+
+           ***const allLi=document.querySelectorAll('.nav-section li');
+for(const li of allLi){
+    console.log(li.innerText)
+}      
+**class hoile . , id hoile # ,but tag hoile tag name dibo (only querySelectorAll er khetre)
+ *^*just first eer element paite querySelector use hoa.
+
+**querySelector er khetre nodelist day,but class or tagname er khetre html collection day.
+
+     ->->-> difference between nodelist and htmlCollection:
+1. static vs live
+2.for each applicable vs not applicable
+3. accessed by only index number vs accessed by their name, id, or index number
+4.
+
+**styling dom properties:
+
+const sections=document.querySelectorAll('section');
+console.log(sections);
+for(const section of sections){
+    section.style.border='2px solid blue';
+    section.style.marginBottom='20px';
+    section.style.backgroundColor='lightgray';
+}
+
+**add and remove classes:
+
+const h4Button=document.getElementById('h4-button');
+console.log(h4Button);
+h4Button.classList.add('h4-button');
+h4Button.classList.remove('h4-button');
+
+*style attribute er priority beshi thake class er chey
+
+***nodeList,childnode,nextsibling,previoussibling:
+   const h4Button=document.getElementById('h4-button')
+   console.log(h4Button.childNodes[3])
+
+**createElement,appendChild,parentnode:
+   const placeSul=document.getElementById('placeSul');
+
+   const li=document.createElement('li');
+   li.innerText='gallery';
+
+   placeSul.appendChild(li);
+   console.log(placeSul)
+
+   console.log(placeSul.parentNode)
+
+**innerHtml:
+const mainContainer=document.getElementById('mainContainer');
+const newSection=document.createElement('section');
+newSection.innerHTML=`
+<h2>new section</h2>
+<p>hfhsdjhjsdahfahfiahfaihfisduhiuhaiud</p>
+`
+const newSectionappend=mainContainer.appendChild(newSection);
+
+
+
+*****jei script age likha hobe seta properties age pabe.
