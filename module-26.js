@@ -38,16 +38,16 @@
 //     commentsection.appendChild(p);
 //     textArea.value='';
 // })
-// document.getElementById('inputedText').addEventListener('keyup',function(event){
-//     const inputedtext=event.target.value;
-//     const deleteButton=document.getElementById('deleteButton');
-//     if(inputedtext=='delete'){
-// deleteButton.removeAttribute('disabled');
-//     }
-//     else{
-//         deleteButton.setAttribute('disabled',true);
-//     }
-// })
+document.getElementById('inputedText').addEventListener('keyup',function(event){
+    const inputedtext=event.target.value;
+    const deleteButton=document.getElementById('deleteButton');
+    if(inputedtext=='delete'){
+deleteButton.removeAttribute('disabled');
+    }
+    else{
+        deleteButton.setAttribute('disabled',true);
+    }
+})
 // document.getElementById('deleteButton').addEventListener('click',function(){
 //  const deletedtext=document.getElementById('deletedText');
 //  deletedtext.style.display='none';

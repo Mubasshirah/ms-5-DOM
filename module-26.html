@@ -38,8 +38,8 @@
     <h2 id="deletedText">this text will be deleted</h2>
     <input id="inputedText" type="text" placeholder="please write delete">
     <button id="deleteButton" disabled>delete</button>
-</section> -->
-<!-- <section id="ul-delegate">
+</section>
+<section id="ul-delegate">
     <h2>Event Bubble</h2>
     <ul id="list-ul-delegate">
         <li class="item">event delegate-1</li>
@@ -51,8 +51,8 @@
         <li class="item">event delegate-7</li>
     </ul>
 </section>
-<button id="add-event">Add event</button> -->
-<!-- <section id="ul-container">
+<button id="add-event">Add event</button>
+<section id="ul-container">
     <h2>Event Bubble</h2>
     <ul id="list-ul">
         <li id="item-1">event bubble-1</li>
@@ -64,8 +64,29 @@
         <li id="item-7">event bubble-7</li>
     </ul>
 </section> -->
+<!-- <section>
+    <h2 id="deletedText">this text will be deleted</h2>
+    <input id="inputedText" type="text" placeholder="please write delete">
+    <button id="deleteButton" disabled>delete</button>
+</section>
 <script src="module-26.js"></script>
 <script>
+    document.getElementById('inputedText').addEventListener('keyup',function(event){
+    const inputedtext=event.target.value;
+    console.log(inputedtext);
+    const deleteButton=document.getElementById('deleteButton');
+    if(inputedtext=='delete'){
+deleteButton.removeAttribute('disabled');
+    }
+    else{
+        deleteButton.setAttribute('disabled',true);
+    }
+})
+document.getElementById('deleteButton').addEventListener('click',function(){
+ const deletedtext=document.getElementById('deletedText');
+ deletedtext.style.display='none';
+}) -->
+
 //     document.getElementById('ul-delegate').addEventListener('click',function(event){
 //         event.target.parentNode.removeChild(event.target);
 //     })

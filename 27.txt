@@ -1,0 +1,98 @@
+step-1:::::check whether the user is valid or not after clicking on sumbit  button:
+    
+    document.getElementById('submitbutton').addEventListener('click',function(){
+    const emailInput=document.getElementById('inputemail');
+    const emailValue=emailInput.value;
+    const passInput=document.getElementById('inputpass');
+    const passValue=passInput.value;
+    console.log(emailValue,passValue)
+step-1.1:::::if the user is valid redirect to the bank page home:
+
+    if(emailValue ==='adi.com' && passValue==='adi'){
+    window.location.href='bank.html';
+    }
+    else{
+        alert('vaag');
+    }
+    
+})
+
+step-2::::::get the deposit aounmt and make it number from string, get the previous deposit amount and transform it number from strinng,finally add previous and the current and set it as the inner value of previousdepositAmount:
+
+ step-2.1:get the deposit aounmt and make it number from string
+    document.getElementById('depositbtn').addEventListener('click',function(){
+    const dipositAmount=document.getElementById('amountdeposit');
+    const dipositAmountValueString=dipositAmount.value;
+    const depositAmountValueFloat=parseFloat(dipositAmountValueString);
+    dipositAmount.value='';
+
+    ////////error handling///////
+    if(isNaN(depositAmountValueFloat)){
+        alert('input number');
+        return;
+    }
+
+step-2.2:get the previous deposit amount and transform it to number from strinng
+    const previousdepositAmount=document.getElementById('previousdepositamount');
+    const previousdepositAmountString=previousdepositAmount.innerText
+    const previousdepositAmountFloat=parseFloat(previousdepositAmountString);
+
+step-2.3:add previous and the current and set it as the inner value of previousdepositAmount:
+    const currentDepositField=depositAmountValueFloat+previousdepositAmountFloat;
+    console.log( currentDepositField);
+    previousdepositAmount.innerText=currentDepositField;
+
+step-2.4:finally get balance current total:
+    const previousBalance=document.getElementById('balanceAfterDepositOrWithdraw');
+    const previousBalanceString=previousBalance.innerText;
+    const previousBalanceFloat=parseFloat(previousBalanceString);
+    const currrentBalanceAfterDeposit=depositAmountValueFloat+previousBalanceFloat;
+    previousBalance.innerText=currrentBalanceAfterDeposit;
+
+})
+
+step-3::::get the withdraw aounmt and make it number from string, get the previous withdraw amount and transform it number from strinng,add previous and the current and set it as the inner value of previousWithdrawAmount and finally get balance total
+    
+step-3.1:get the withdraw aounmt and make it number from string
+     
+    document.getElementById('withdrawbtn').addEventListener('click',function(){
+    const balanceWithdraw=document.getElementById('amountwithdraw');
+    const balanceWithdrawString=balanceWithdraw.value;
+    const balanceWithdrawFloat=parseFloat(balanceWithdrawString);
+    balanceWithdraw.value='';
+
+    ////////error handling///////
+    if(isNaN(balanceWithdrawFloat)){
+        alert('input number');
+        return;
+    }
+
+step-3.2:get the previous withdraw amount and transform it number from strinng,
+
+    const previousWithdrawAmount=document.getElementById('previouswithdrawamount');
+    const previousWithdrawAmountString=previousWithdrawAmount.innerText;
+    const previousWithdrawAmountFloat=parseFloat(previousWithdrawAmountString);
+    const currentWithraaAmount=balanceWithdrawFloat+previousWithdrawAmountFloat;
+
+step-3.3:add previous and the current and set it as the inner value of previousWithdrawAmount
+
+     const balanceBeforeWithdraw=document.getElementById('balanceAfterDepositOrWithdraw');
+    const balanceBeforeWithdrawString=balanceBeforeWithdraw.innerText;
+    const balanceBeforeWithdrawFloat=parseFloat(balanceBeforeWithdrawString);
+
+    ///////error handling/////
+    if(currentWithraaAmount>balanceBeforeWithdrawFloat){
+        alert('tk nai');
+        return;
+    }
+    previousWithdrawAmount.innerText=currentWithraaAmount;
+
+step-3.4:finally get balance total
+
+    const currentBalanceTotalAfterWithdraw=balanceBeforeWithdrawFloat-balanceWithdrawFloat;
+    balanceBeforeWithdraw.innerText=currentBalanceTotalAfterWithdraw;
+})j
+
+
+
+
