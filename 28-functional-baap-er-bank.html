@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .border{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <h1>bank inside</h1>
+
+    <div class="border">
+        <h2>deposit</h2>
+        <h3>$<span id="previousdepositamount">00</span></h3>
+    </div>
+    <div class="border">
+        <h2>withdraw</h2>
+        <h3>$<span id="previouswithdrawamount">00</span></h3>
+    </div>
+    <div class="border">
+        <h2>balance</h2>
+        <h3>$<span id="balanceAfterDepositOrWithdraw">1200</span></h3>
+    </div>
+    <div class="border">
+        <h2>please deposit</h2>
+        <input type="text" id="amountdeposit">
+        <button id="depositbtn">deposit</button>
+    </div>
+    <div class="border">
+        <h2>please withdraw</h2>
+        <input type="text" id="amountwithdraw">
+        <button id="withdrawbtn">withdraw</button>
+    </div>
+    <script src="28-utilities.js"></script>
+    <script src="28-functional-baap-er-bank.js"></script>
+</body>
+</html>
