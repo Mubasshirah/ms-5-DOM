@@ -33,8 +33,3 @@
 // })
 
 
-document.getElementById('btn-bold').addEventListener('click',function(){
-    const areaText=document.getElementById('textAreaText');
-    // const areaTextValue=areaText.value;
-    areaText.style.backgroundColor='red';
-})

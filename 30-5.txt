@@ -1,0 +1,23 @@
+1.some common errors
+ 1.referenceError- variable declearena kore call korle
+ 2.syntaxerror- , { ; egulo na dile
+ 3.typeError-"cannot read property of undefined"
+                ->kono undefined jiniser vitor aro kono value khujte chaile.
+
+Explore Try-catch-finally to handle code with error:-
+
+try{
+
+}
+catch{
+
+}
+finally{
+
+}
+*ata use kora hoa jate kothauerror khaileu nexxt step e jay.at ause na korle error khaua jaygay e code stop hoe jbe.ar samne agabena.
+
+
+Data object:
+
+js date: pore dekhte hbe

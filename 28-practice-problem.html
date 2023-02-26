@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 <body>
@@ -21,9 +21,31 @@
       <h2>please pay <span id="payAfterDiscountField">00</span>tk </h2> -->
 
       <!-- text-editor -->
-      <textarea name="" id="" cols="30" rows="10" id="textAreaText"></textarea>
+      <textarea cols="30" rows="10" id="textAreaText"></textarea>
       <button id="btn-bold">bold</button>
       <button id="btn-italic">italic</button>
-   <script src="28-practice-problem.js"></script>
+ 
+ 
+                                                                         <script>
+ 
+document.getElementById('btn-italic').addEventListener('click',function (){
+    const textArea=document.getElementById('textAreaText');
+    const textAreaValue=textArea.value;
+    textArea.style.textAlign="center";
+    
+    console.log(textAreaValue);
+
+})
+document.getElementById('btn-bold').addEventListener('click',function (){
+    const textArea=document.getElementById('textAreaText');
+    const textAreaValue=textArea.value;
+    textArea.style.fontWeight="bold";
+    console.log(textAreaValue);
+
+})
+</script>
+
+
+
 </body>
 </html>
